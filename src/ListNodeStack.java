@@ -26,20 +26,4 @@ public class ListNodeStack implements Stack {
         }
         return node.remove(node,top--).data;
     }
-
-    public static void main(String[] args) {
-        ListNodeStack listNodeStack = new ListNodeStack();
-        listNodeStack.push(1);
-        listNodeStack.push(2);
-        listNodeStack.push(3);
-
-        ListNode node = listNodeStack.node;
-        while(node != null) {
-            System.out.println(node.data);
-            node = node.next;
-        }
-        System.out.println(listNodeStack.pop());
-        System.out.println(listNodeStack.pop());
-        System.out.println(listNodeStack.pop());
-    }
 }
