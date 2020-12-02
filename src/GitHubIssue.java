@@ -1,13 +1,14 @@
 import org.kohsuke.github.*;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.OutputStreamWriter;
+import java.util.*;
 
 public class GitHubIssue {
     //personal token need to secret
-    private static final String MY_PERSONAL_TOKEN = "d2c85df1e453bff6f4f7c775818d50a3bd2549e3";
+    private static final String MY_PERSONAL_TOKEN = "f97877d90b6544f76799c0a6f1ffce022dce6c8c";
+
     public static void main(String[] args) throws IOException {
         GitHub github = new GitHubBuilder().withOAuthToken(MY_PERSONAL_TOKEN).build();
 
@@ -16,12 +17,36 @@ public class GitHubIssue {
 
         //IssueState ALL, OPEN, CLOSED
         List<GHIssue> issues = repo.getIssues(GHIssueState.ALL);
-        Map<String,Integer> particpant = new HashMap<>();
+        Map<String, Integer> participant = new HashMap<>();
 
         //1-18개 이슈
-        for(GHIssue issue : issues){
+        for (GHIssue issue : issues) {
+            Set<String> onlyOneParticipant = new HashSet<>();
 
+            //댓글 한개 이상 단 경우 유저이름 중복 제거
+            for (GHIssueComment comment : issue.getComments()) {
+                onlyOneParticipant.add(comment.getUser().getName());
+            }
+
+            //카운트 증가해주기
+            for (String name : onlyOneParticipant) {
+                if(participant.containsKey(name)){
+                    participant.replace(name,participant.get(name)+1);
+                    continue;
+                }
+                participant.put(name,1);
+            }
         }
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        //참여율 출력
+        for(String name : participant.keySet()){
+            double rate = (double)(participant.get(name) * 100) / issues.size();
+            bw.write("name : " + name);
+            bw.write(", Participation Rate : "+String.format("%.2f",rate)+"%");
+            bw.newLine();
+        }
+        bw.close();
     }
 
 }
