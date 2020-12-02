@@ -7,7 +7,7 @@ import java.util.*;
 
 public class GitHubIssue {
     //personal token need to secret
-    private static final String MY_PERSONAL_TOKEN = "f97877d90b6544f76799c0a6f1ffce022dce6c8c";
+    private static final String MY_PERSONAL_TOKEN = "MY_SECRET_TOKEN";
 
     public static void main(String[] args) throws IOException {
         GitHub github = new GitHubBuilder().withOAuthToken(MY_PERSONAL_TOKEN).build();
