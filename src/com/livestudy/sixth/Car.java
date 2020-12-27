@@ -1,3 +1,5 @@
+package com.livestudy.sixth;
+
 public class Car {
     private int speed = 10;
     private String name = "car";

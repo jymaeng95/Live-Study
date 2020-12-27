@@ -1,3 +1,5 @@
+package com.livestudy.sixth;
+
 public abstract class AbstractCar {
     abstract public void run();
     abstract public void stop();

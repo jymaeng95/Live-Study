@@ -1,3 +1,5 @@
+package com.livestudy.sixth;
+
 public class Inheritance {
     static class A {
         int speed = 10;
