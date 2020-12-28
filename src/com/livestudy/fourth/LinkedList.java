@@ -1,3 +1,5 @@
+package com.livestudy.fourth;
+
 public interface LinkedList {
 
     // add remove contains

@@ -1,7 +1,9 @@
+package com.livestudy.fourth;
+
 public class ListNodeStack implements Stack {
 
     static int top;
-    ListNode node;
+    public ListNode node;
     public ListNodeStack() {
         this.node = null;
         this.top = -1;

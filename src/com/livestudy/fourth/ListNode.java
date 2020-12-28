@@ -1,6 +1,8 @@
+package com.livestudy.fourth;
+
 public class ListNode implements LinkedList {
-    int data;
-    ListNode next;
+    public int data;
+    public ListNode next;
 
     public ListNode() {}
     public ListNode(int data) {

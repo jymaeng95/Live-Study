@@ -1,3 +1,5 @@
+package com.livestudy.fifth;
+
 import org.kohsuke.github.*;
 
 import java.io.BufferedWriter;

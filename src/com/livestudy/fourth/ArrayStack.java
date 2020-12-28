@@ -1,6 +1,7 @@
+package com.livestudy.fourth;
 
 public class ArrayStack implements Stack {
-    int[] stack;
+    public int[] stack;
     int top;
 
     public ArrayStack(int size) {

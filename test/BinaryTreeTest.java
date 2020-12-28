@@ -1,3 +1,5 @@
+import com.livestudy.fifth.BinaryTree;
+import com.livestudy.fifth.Node;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -5,7 +7,6 @@ import org.junit.jupiter.api.Test;
 class BinaryTreeTest {
     private static Node root;
     private static BinaryTree binaryTree;
-
     @BeforeEach
     void setUp() {
         Node node10 = new Node(null,null,10);
