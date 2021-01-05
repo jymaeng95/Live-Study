@@ -17,5 +17,10 @@ public class PhoneApp {
         int serialNumber1 = ((Galaxy) phone).getSerialNumber();
         System.out.println(serialNumber1);
 
+        IPhone iPhone = new IPhone();
+        iPhone.setSerialNumber(10);
+        iPhone.shoot();
+        iPhone.setting();
+        Camera.stop();
     }
 }
