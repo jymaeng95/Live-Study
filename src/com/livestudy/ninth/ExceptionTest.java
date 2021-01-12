@@ -19,12 +19,6 @@ public class ExceptionTest {
             System.out.println("array exception");
         }
 
-        try {
-            System.out.println(test[1]);
-        }catch (Exception  e){
-
-        }
-
         try{
             System.out.println(sumPositiveNum(-1));
         } catch (Exception e ){
