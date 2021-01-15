@@ -3,7 +3,7 @@ package com.livestudy.ninth;
 public class CustomExceptionApp {
     public static void main(String[] args) {
         try{
-            getAge(1995);
+            getAge(2022);
         } catch (CustomException e){
             e.printStackTrace();
             System.out.println("ERR_CODE : "+ e.getErrorCode());
