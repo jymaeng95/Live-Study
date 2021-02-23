@@ -11,5 +11,7 @@ public class GenericTest {
 
         System.out.println("이름 : "+intPerson.getName());
         System.out.println("성별 : "+intPerson.getGender());
+
+//        People<String> people = new People<String>();
     }
 }
