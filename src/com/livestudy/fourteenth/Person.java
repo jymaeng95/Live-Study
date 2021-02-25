@@ -1,6 +1,6 @@
 package com.livestudy.fourteenth;
 
-public class Person <T> implements Comparable<Person> {
+public class Person <T> {
     private T name;
     private T gender;
     private T age;
@@ -34,8 +34,5 @@ public class Person <T> implements Comparable<Person> {
         this.age = age;
     }
 
-    @Override
-    public int compareTo(Person o) {
-        return 0;
-    }
+
 }
