@@ -33,6 +33,4 @@ public class Person <T> {
     public void setAge(T age) {
         this.age = age;
     }
-
-
 }
