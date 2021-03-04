@@ -7,6 +7,7 @@ import java.util.function.Supplier;
 
 public class FunctionInterfaceTest {
     public static void main(String[] args) {
+        //Function과 Predicate차이 : 리턴타입
         Function<Integer,Integer> function = (num) -> num+10;
         int apply = function.apply(10);
         System.out.println(apply);
